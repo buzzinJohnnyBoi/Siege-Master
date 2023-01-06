@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Attack Master</title>
+</head>
+<body>
+	<b> Attack Master </b>
+	<h1><button onclick="buy();"> + </button> Buy</h1>
+	<button id="button" style="display: none; position: absolute; top: 400px; left: 400px;" onclick="PreAttack()">Attack</button>
+	<div class="grass"></div>
+	<div class="statusBar" id="playerStatus">
+		<name>(NAME)</name><br><br>
+		<div class="box">
+			<h2>Status:</h2>
+			<h3 onclick="addKnight();"><img src="k.png" class="pic1"> = <j id="j1"></j></h3>
+			<h3 onclick="addLongbow();"><img src="l.png" class="pic2"> = <j id="j2"></j></h3>
+			<h3 onclick="addCrossbow();"><img src="c.png" class="pic3"> = <j id="j3"></j></h3>
+			<h3 onclick="addSpear();"><img src="s.png" class="pic4"> = <j id="j4"></j></h3>
+		</div>
+		<div class="box" style="position: relative; top: -30px;">
+		<h2>Inventory:</h2>
+			<h3>Horses: <j id="j5"></j></h3>
+			<h3>Trebuchets: <j id="j6"></j></h3>
+			<h3>Catapults: <j id="j7"></j></h3>
+			<h3>Ladders: <j id="j8"></j></h3>
+			<h3>Siege towers: <j id="j9"></j></h3>
+			<h3>Movable shields: <j id="j10"></j></h3>
+			<h3>Battering ram: <j id="j11"></j></h3>
+		</div>
+	</div>
+	<div class="statusBar" id="enemyStatus">
+		<name>(NAME)</name><br><br>
+		<div class="box">
+			<h2>Status:</h2>
+			<h3><img src="k.png" class="pic1"> = <k id="k1"></k></h3>
+			<h3><img src="l.png" class="pic2"> = <k id="k2"></k></h3>
+			<h3><img src="c.png" class="pic3"> = <k id="k3"></k></h3>
+			<h3><img src="s.png" class="pic4"> = <k id="k4"></k></h3>
+		</div>
+		<div class="box" style="position: relative; top: -100px;">
+		<h2>Situation:</h2>
+			<h3>Food: <k id="k5"></k>%</h3>
+			<h3>Walls: <k id="k6"></k>%</h3>
+			<h3>People: <k id="k7"></k>%</h3>
+		</div>
+	</div>
+	<div class="castle">
+
+		<div class="wall">
+		<div class="tower">
+			<div class="roof"></div>
+			<div class="window" style="top: -40px;"></div>
+			<div class="window" style="top: 0px;"></div>
+		</div>
+			<div class="window"></div>
+			<div class="turret"></div>
+		</div>
+		<div class="wall" style="height: 115px;">
+			<div class="window"></div>
+			<div class="turret" id="t2"></div>
+			<div class="gate">
+				<div class="wood"></div>
+				<div class="wood" id="w2"></div>
+				<div class="wood" id="w3"></div>
+				<div class="wood" id="w4"></div>
+				<div class="wood" id="w5"></div>
+				<div class="wood" id="w6"></div>
+				<div class="wood" id="w7"></div>
+				<div class="wood" id="w8"></div>
+			</div>
+		</div>
+		<div class="wall">
+			<div class="window"></div>
+			<div class="turret" id="t3"></div>
+		</div>
+
+	</div>
+	<div class="buyscreen"><content>
+		<h1><button onclick="unbuy();"> - </button> Back to game</h1>
+		<br><br><br><br>
+			<h2>Inventory:</h2><br>
+			<h2>Money: $<m></m></h2>
+			<h3><img src="k.png" class="pic1"> Knights: <l id="l1"></l></h3>
+			<h3><img src="l.png" class="pic2"> Longbow men: <l id="l2"></l></h3>
+			<h3><img src="c.png" class="pic3"> Crossbow men: <l id="l3"></l></h3>
+			<h3><img src="s.png" class="pic4"> Spear men: <l id="l4"></l></h3>
+			<h3>Horses: <l id="l5"></l> </h3>
+			<h3>Trebuchets:<l id="l6"></l> </h3>
+			<h3>Catapults: <l id="l7"></l> </h3>
+			<h3>Ladders: <l id="l8"></l> </h3>
+			<h3>Siege towers: <l id="l9"></l> </h3>
+			<h3>Movable shields: <l id="l10"></l> </h3>
+			<h3>Battering rams: <l id="l11"></l> </h3>
+			<div class="box" style="position: absolute; top: 140px; left: 30%;"> 
+			<h3><button onclick="buysome(1);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Knights ($15)</button></h3>
+			<h3><button onclick="buysome(2);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Longbow men ($15)</button></h3>
+			<h3><button onclick="buysome(3);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Crossbow men ($10)</button></h3>
+			<h3><button onclick="buysome(4);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Spear men ($10)</button></h3>
+			<h3><button onclick="buysome(5);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Horses ($100)</button></h3>
+			<h3><button onclick="buysome(6);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Trebuchets ($300)</button></h3>
+			<h3><button onclick="buysome(7);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Catapults ($300)</button></h3>
+			<h3><button onclick="buysome(8);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Ladders ($10)</button></h3>
+			<h3><button onclick="buysome(9);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Siege towers  ($250)</button></h3>
+			<h3><button onclick="buysome(10);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Movable shields ($10)</button></h3>
+			<h3><button onclick="buysome(11);" style="font-size: 20px; border-bottom: 5px solid white;">Buy Battering rams ($100)</button></h3>
+			</div>
+	</content></div>
+	<div id="main"></div>
+</body>
+<script src="main.js"></script>
+<script src="game.js"></script>
+</html>

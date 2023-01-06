@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+body {
+	background-color: white;
+	color: white;
+	text-align: right;
+	/*background: url(image.jpg);*/
+	background-size: 100% 600%;
+}
+b{
+	font-family: Yellowtail;
+	font-size: 100px;
+	padding: 100px;
+}
+
+.grass {
+	width: 100%;
+	height: 75px;
+	background: green;
+	position: absolute;
+	top: 600px;
+}
+
+
+.castle {
+	position: absolute;
+	top: 430px;
+	left:75%;
+}
+.wall {
+	width: 100px;
+	height: 170px;
+	background-color: gray;
+	display: inline-block;
+	margin: 0px -2px;
+	border: 1px solid black;
+	border-top:none;
+	z-index: 1234567;
+}
+
+.turret {
+	position: relative;
+	width: 20px;
+	height: 23px;
+	background-color: gray;
+	border-left: 20px solid white;
+	border-right:20px solid white;
+	left: 50%;
+	top: -25px;
+	transform: translateX(-50%);
+}
+
+#t2 {
+	top:-45px;
+	background-color: rgba(0, 0, 0, 0.0);
+}
+
+.window {
+	width: 14px;
+	height: 23px;
+	background-color: rgba(25, 25, 25, 0.5);
+	position: relative;
+	left: 50%;
+	top: 40px;
+	transform: translateX(-50%);
+}
+
+.gate {
+	position: absolute;
+	left: 128px;
+	top: 123px;
+	width: 39px;
+	height: 43px;
+	background-color: white;
+	border-left:5px solid white;
+	border-right:3px solid white;
+	border-top:3px solid white;
+}
+
+
+.wood {
+	width: 5px;
+	height: 43px;
+	background-color: saddlebrown;
+	position: absolute;
+	display: inline-block;
+	left: 0px;
+	top: 0px;
+	transform: translateX(-50%);
+}
+
+#w2 {
+	left: 12px;
+}
+
+#w3 {
+	left: 24px;
+}
+
+#w4 {
+	left: 36px;
+}
+
+#w5 {
+	transform: rotate(90deg);
+	left: 16px;
+	top: -12px;
+}
+
+#w6 {
+	transform: rotate(90deg);
+	left: 16px;
+	top: 1px;
+}
+
+#w7 {
+	transform: rotate(90deg);
+	left: 16px;
+	top: 13px;
+}
+
+#w8 {
+	left: 36px;
+}
+
+.tower {
+	position: absolute;
+	width: 60px;
+	height: 170px;
+	top: -115px;
+	background-color: dimgray;
+	display: inline-block;
+	margin: 0px -2px;
+	border: 1px solid black;
+	border-top:none;
+	border-bottom:none;
+	left: 51%;
+	transform: translateX(-51%);
+	z-index: 0;
+}
+
+.roof {
+	position: relative;
+	width: 80px;
+	height: 60px;
+	left: 50%;
+	top: -60px;
+	transform: translateX(-50%);
+	background-color: 	darkslategray;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+button {
+	background: orange;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 30px;
+	text-align: left;
+}
+
+h1 {
+	float: left;
+	margin: 10px;
+}
+
+.buyscreen {
+	position: absolute;
+	top: 0px;
+	padding-left: 10%;
+	width: 90%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	display: none;
+	transition: 0.5s;
+	color: black;
+
+}
+
+content {
+	display: none;
+	text-align: left;
+}
+
+.statusBar {
+	width: 50%;
+	height: 294px;
+	background: white;
+	position: absolute;
+	top: 675px;
+	text-align: left;
+}
+
+#enemyStatus {
+	left: 50%;
+	border-left: 1px solid black;
+	width: 959px;
+}
+
+name {
+	font-size: 30px;
+	color: black;
+	padding: 10px;
+}
+
+.box {
+	width: 40%;
+	height: 100px;
+	display: inline-block;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+	display: inline-block;
+}
+
+h3 {
+	font-size: 20px;
+	color: black;
+}
+
+.pic1 {width: 40px; display: inline;}
+.pic2 {width: 40px; display: inline;}
+.pic3 {width: 40px; display: inline;}
+.pic4 {width: 40px; display: inline;}
+
+.kightclass {
+	width: 40px;
+	height: 64px;
+	background-image: url("knight.png");
+	background-size: 100%; 
+	display: inline-block;
+	position: relative;
+}
+.longbowclass {
+	width: 25px;
+	height: 45px;
+	background-image: url("longbow.png");
+	background-size: 100%; 
+	display: inline-block;
+}
+
+
+#main {
+	position: absolute;
+	top: 537px;
+}
+
+@keyframes move {
+	0% {
+		left: 0px;
+		animation-timing-function: linear;
+	}
+	50% {
+		animation-timing-function: linear;
+		left: 600px;
+	}
+
+	100% {
+		animation-timing-function: linear;
+		left: 1200px;
+	}
+}
